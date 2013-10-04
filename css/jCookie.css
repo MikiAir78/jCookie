@@ -18,11 +18,11 @@
 	cursor: pointer;
 }
 
-a:link, a:visited, a:active{
+.cookies a:link, .cookies a:visited, .cookies a:active{
 	color: #FFF;	text-decoration: underline;
 }
 
-a:hover{
+.cookies a:hover{
 	color: #CCC;	text-decoration: underline;
 }
 
