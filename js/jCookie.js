@@ -1,4 +1,4 @@
-(function($){
+/*! * jQuery jCookie Plugin v1.0 *  * https://github.com/iJos/jCookie * * Copyright 2013 Jose Luis Jimenez | @iJos *  * Released under the GNU GPL v2 License */(function($){
 	
 	$.fn.jCookie = function(options){
 		
