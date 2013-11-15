@@ -1,38 +1,27 @@
 /*! * jQuery jCookie Plugin v1.0 *  * https://github.com/iJos/jCookie * * Copyright 2013 Jose Luis Jimenez | @iJos *  * Released under the GNU GPL v2 License */(function($){
-	
 	$.fn.jCookie = function(options){
-		
 		// Start with the defaults
-		defaults = {
-			name 		: "jCookie",
-			value		: "1",
-	        expireTime	: 365,
-	        insertBefore: "body",
-	        text		: "This site is using Cookies!",
-	        linkText	: "",
-        	linkUrl		: ""
-	    };
-	    	  
+		defaults = {
+			name 		: "jCookie",
+			value		: "1",
+	        expireTime	: 365,
+	        insertBefore: "body",
+	        text		: "This site is using Cookies!",
+	        linkText	: "",
+        	linkUrl		: ""
+	    };  
 	    // Override defaults if we have options	  
 	    var settings = $.extend(defaults, options);	  
-		
-		
 		checkCookie(settings);
-
-
 		// ON CLICK CLOSE
 		$('.cookie-close-button').click(function(){
 			hideCookieAlert(settings);
 		});
-
 	};
-	
-	
 	var cookieAlert = function(settings){
 		var cookieDiv = "<div class='cookies'>" + settings.text + " " + "<a href='" + settings.linkUrl + "' target='_blank'>" + settings.linkText + "</a> <div class='cookie-close-button'>X</div></div>";
 		$(cookieDiv).insertBefore(settings.insertBefore);
 	}
-	
 	var hideCookieAlert = function(settings){
 		$('.cookies').hide();	
 		setCookie(settings);
